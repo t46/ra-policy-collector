@@ -13,8 +13,7 @@ build/
 venv/
 ENV/
 
-# uv
-uv.lock
+# uv (uv.lock is committed for reproducible CI)
 
 # IDE
 .idea/
