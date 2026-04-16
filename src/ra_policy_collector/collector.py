@@ -13,7 +13,7 @@ from .models import (
     save_items,
 )
 from .report import generate_latest_symlink, generate_report
-from .sources import collect_jst, collect_jsps, collect_mext
+from .sources import collect_jst, collect_mext
 
 # プロジェクトルートからの相対パス
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -21,10 +21,10 @@ DATA_DIR = PROJECT_ROOT / "data"
 OUTPUT_DIR = PROJECT_ROOT / "output"
 
 # 収集関数のレジストリ
+# NOTE: JSPS は著作権がJSPS帰属・無断転載禁止のため、許可取得まで無効化
 COLLECTORS: list[callable] = [
     collect_mext,
     collect_jst,
-    collect_jsps,
 ]
 
 
